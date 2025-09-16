@@ -14,7 +14,6 @@ public class SearchResultsPageTest extends BaseTest{
 	@BeforeClass
 	public void searchPageSetUp() {
 		accPage =loginPage.doLogin(prop.getProperty("username"),prop.getProperty("password") );
-		searchPage = accPage.doSearch("mac book");
 	}
 	
 	@Test

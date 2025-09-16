@@ -2,7 +2,6 @@ package com.qa.opencart.constants;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class AppConstants {
 	
@@ -28,5 +27,4 @@ public class AppConstants {
 	
 	public static final ArrayList<String> ACC_PAGE_HEADERS_LIST = new ArrayList<String>(Arrays.asList(list));
 			//List.of("My Account","My Orders","My Affiliate Account","Newsletter");
-	
 }
