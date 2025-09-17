@@ -50,14 +50,22 @@ public class ElementUtil {
 	}
 
 	public void doSendKeys(By locator, String value) {
+		nullCheck(value);
+		getElement(locator).clear();
 		getElement(locator).sendKeys(value);
 
 	}
 
 	public void doSendKeys(By locator, CharSequence... value) {
 		nullCheck(value);
+		getElement(locator).clear();
+		
 		getElement(locator).sendKeys(value);
 
+	}
+	
+	public void doSendKeys(String locatorType, String locatorValue,String value) {
+		
 	}
 
 	public void doClick(By locator) {
@@ -90,6 +98,10 @@ public class ElementUtil {
 	public WebElement getElement(By locator) {
 		return driver.findElement(locator);
 	}
+	
+//	public WebElement getElement(String locatorType, String locatorValue) {
+//		return driver.findElement(B)
+//	}
 
 	//////////////// findElements Wrapper Methods ////////////////////////////
 
@@ -108,6 +120,7 @@ public class ElementUtil {
 		return eleText;
 	}
 
+	
 	public int listSize(List<WebElement> l) {
 		return l.size();
 	}
@@ -354,6 +367,7 @@ public class ElementUtil {
 	public void actionsSendKeysWithPause(By locator, String val, long pause) {
 
 		WebElement textField = getElement(locator);
+		
 		char[] charArray = val.toCharArray();
 
 		for (char c : charArray) {
@@ -424,6 +438,7 @@ public class ElementUtil {
 	}
 	
 	public void sendKeysWithWait(By locator, int timeout,CharSequence...str ) {
+		waitForElementVisible(locator,timeout).clear();
 		waitForElementVisible(locator,timeout).sendKeys(str);
 	}
 	

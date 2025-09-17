@@ -5,10 +5,10 @@
     <classes>
       <class name="com.qa.opencart.tests.ProductInfoPageTest">
         <methods>
-          <include name="productPageURLTest"/>
           <include name="productPageSetup"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="productMetaDataTest"/>
         </methods>
       </class> <!-- com.qa.opencart.tests.ProductInfoPageTest -->
     </classes>

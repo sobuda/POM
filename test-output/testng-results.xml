@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-13T23:28:05 IST" name="Default suite" finished-at="2025-09-13T23:28:16 IST" duration-ms="10833">
+  <suite started-at="2025-09-17T03:42:08 IST" name="Default suite" finished-at="2025-09-17T03:42:29 IST" duration-ms="20925">
     <groups>
     </groups>
-    <test started-at="2025-09-13T23:28:05 IST" name="Default test" finished-at="2025-09-13T23:28:16 IST" duration-ms="10833">
+    <test started-at="2025-09-17T03:42:08 IST" name="Default test" finished-at="2025-09-17T03:42:29 IST" duration-ms="20925">
       <class name="com.qa.opencart.tests.ProductInfoPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5d7148e2]" started-at="2025-09-13T23:28:05 IST" name="setUp" finished-at="2025-09-13T23:28:11 IST" duration-ms="6296" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:08 IST" name="setUp" finished-at="2025-09-17T03:42:16 IST" duration-ms="8222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="productPageSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5d7148e2]" started-at="2025-09-13T23:28:11 IST" name="productPageSetup" finished-at="2025-09-13T23:28:16 IST" duration-ms="4104" status="PASS">
+        <test-method is-config="true" signature="productPageSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:16 IST" name="productPageSetup" finished-at="2025-09-17T03:42:19 IST" duration-ms="2837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productPageSetup -->
-        <test-method signature="productHeaderTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5d7148e2]" started-at="2025-09-13T23:28:16 IST" name="productHeaderTest" finished-at="2025-09-13T23:28:16 IST" duration-ms="52" status="PASS">
+        <test-method signature="productHeaderTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:19 IST" name="productHeaderTest" finished-at="2025-09-17T03:42:23 IST" duration-ms="4390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productHeaderTest -->
-        <test-method signature="productImageCountTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5d7148e2]" started-at="2025-09-13T23:28:16 IST" name="productImageCountTest" finished-at="2025-09-13T23:28:16 IST" duration-ms="84" status="PASS">
+        <test-method signature="productImageCountTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:23 IST" name="productImageCountTest" finished-at="2025-09-17T03:42:25 IST" duration-ms="1855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productImageCountTest -->
-        <test-method signature="productPageURLTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5d7148e2]" started-at="2025-09-13T23:28:16 IST" name="productPageURLTest" finished-at="2025-09-13T23:28:16 IST" duration-ms="23" status="PASS">
+        <test-method signature="productMetaDataTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:25 IST" name="productMetaDataTest" finished-at="2025-09-17T03:42:27 IST" duration-ms="2179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productMetaDataTest -->
+        <test-method signature="productPageURLTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:27 IST" name="productPageURLTest" finished-at="2025-09-17T03:42:29 IST" duration-ms="1305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productPageURLTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5d7148e2]" started-at="2025-09-13T23:28:16 IST" name="tearDown" finished-at="2025-09-13T23:28:16 IST" duration-ms="214" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:29 IST" name="tearDown" finished-at="2025-09-17T03:42:29 IST" duration-ms="99" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
