@@ -27,4 +27,6 @@ public class AppConstants {
 	
 	public static final ArrayList<String> ACC_PAGE_HEADERS_LIST = new ArrayList<String>(Arrays.asList(list));
 			//List.of("My Account","My Orders","My Affiliate Account","Newsletter");
+	
+	public static final String REGISTER_SUCCESS_MESSAGE = "Your Account Has Been Created!";
 }

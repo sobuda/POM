@@ -17,7 +17,7 @@ public class LoginPage {
 	private final By password = By.id("input-password");
 	private final By loginBtn = By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input");
 	private final By forgotPswLink = By.linkText("Forgotten Password");
-	
+	private final By RegisterLink = By.linkText("Register");
 	//2. Public  Page Constructor
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -51,4 +51,18 @@ public class LoginPage {
 		
 		return new AccountsPage(driver);
 	}
+	
+	public RegistrationPage navigateToRegisterPage() {
+		eUtil.clickWhenReady(RegisterLink, DEFAULT_TIMEOUT);
+		return new RegistrationPage(driver);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	//delete from usertable where email like'%testAutomation%'
 }

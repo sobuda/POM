@@ -16,7 +16,7 @@ public class SearchResultsPage {
 	
 	private By headerWithSearchKey = By.tagName("h1");
 	private By searchResults = By.xpath("//div[@class='product-thumb']//h4");
-	private By macBookProLinkText = By.linkText("MacBook Pro");
+	//private By productNameLink = By.linkText("MacBook Pro");
 	
 	public SearchResultsPage(WebDriver driver) {
 		this.driver=driver;
@@ -32,8 +32,8 @@ public class SearchResultsPage {
 		return productsEle;
 	}
 
-	public ProductInfoPage selectProduct() {
-		eUtil.waitForElementVisible(macBookProLinkText, DEFAULT_TIMEOUT).click();
+	public ProductInfoPage selectProduct(String productName) {
+		eUtil.waitForElementVisible(By.linkText(productName), DEFAULT_TIMEOUT).click();
 		return new ProductInfoPage(driver);
 	}
 	

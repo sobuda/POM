@@ -31,8 +31,10 @@ public class ProductInfoPage {
 	}
 
 	public String getProductHeader() {
+		String header = eUtil.waitForElementVisible(productHeader, DEFAULT_TIMEOUT).getText();
+		System.out.println(header);
 
-		return eUtil.waitForElementVisible(productHeader, DEFAULT_TIMEOUT).getText();
+		return header;
 	}
 
 	public String getProductPageURL() {
@@ -42,6 +44,7 @@ public class ProductInfoPage {
 
 	public int getImageCount() {
 		int count = eUtil.waitForElementsVisible(productImages, DEFAULT_TIMEOUT).size();
+		System.out.println("Images: "+count);
 		return count;
 	}
 
@@ -49,6 +52,7 @@ public class ProductInfoPage {
 		productMap = new HashMap<String, String>();
 		getProductMetaData();
 		getProductPriceData();
+		System.out.println(productMap);
 		return productMap;
 	}
 

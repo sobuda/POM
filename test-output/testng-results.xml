@@ -1,41 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-17T03:42:08 IST" name="Default suite" finished-at="2025-09-17T03:42:29 IST" duration-ms="20925">
+  <suite started-at="2025-09-18T07:13:06 IST" name="Default suite" finished-at="2025-09-18T07:13:30 IST" duration-ms="24194">
     <groups>
     </groups>
-    <test started-at="2025-09-17T03:42:08 IST" name="Default test" finished-at="2025-09-17T03:42:29 IST" duration-ms="20925">
-      <class name="com.qa.opencart.tests.ProductInfoPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:08 IST" name="setUp" finished-at="2025-09-17T03:42:16 IST" duration-ms="8222" status="PASS">
+    <test started-at="2025-09-18T07:13:06 IST" name="Default test" finished-at="2025-09-18T07:13:30 IST" duration-ms="24194">
+      <class name="com.qa.opencart.tests.RegistrationPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@7e07db1f]" started-at="2025-09-18T07:13:06 IST" name="setUp" finished-at="2025-09-18T07:13:15 IST" duration-ms="9145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="productPageSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:16 IST" name="productPageSetup" finished-at="2025-09-17T03:42:19 IST" duration-ms="2837" status="PASS">
+        <test-method is-config="true" signature="registrationPageSetup()[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@7e07db1f]" started-at="2025-09-18T07:13:15 IST" name="registrationPageSetup" finished-at="2025-09-18T07:13:18 IST" duration-ms="2340" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productPageSetup -->
-        <test-method signature="productHeaderTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:19 IST" name="productHeaderTest" finished-at="2025-09-17T03:42:23 IST" duration-ms="4390" status="PASS">
+        </test-method> <!-- registrationPageSetup -->
+        <test-method signature="userResgistrationTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@7e07db1f]" started-at="2025-09-18T07:13:18 IST" name="userResgistrationTest" data-provider="userInfoData" finished-at="2025-09-18T07:13:23 IST" duration-ms="5309" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vishal]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mehta]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9988776655]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Vishal@M123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productHeaderTest -->
-        <test-method signature="productImageCountTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:23 IST" name="productImageCountTest" finished-at="2025-09-17T03:42:25 IST" duration-ms="1855" status="PASS">
+        </test-method> <!-- userResgistrationTest -->
+        <test-method signature="userResgistrationTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@7e07db1f]" started-at="2025-09-18T07:13:23 IST" name="userResgistrationTest" data-provider="userInfoData" finished-at="2025-09-18T07:13:27 IST" duration-ms="4267" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Gayathri]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Doddar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9988776655]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Gayatri@D123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productImageCountTest -->
-        <test-method signature="productMetaDataTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:25 IST" name="productMetaDataTest" finished-at="2025-09-17T03:42:27 IST" duration-ms="2179" status="PASS">
+        </test-method> <!-- userResgistrationTest -->
+        <test-method signature="userResgistrationTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@7e07db1f]" started-at="2025-09-18T07:13:27 IST" name="userResgistrationTest" data-provider="userInfoData" finished-at="2025-09-18T07:13:30 IST" duration-ms="2974" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Divya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[GS]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9988776655]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Divya@M123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productMetaDataTest -->
-        <test-method signature="productPageURLTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:27 IST" name="productPageURLTest" finished-at="2025-09-17T03:42:29 IST" duration-ms="1305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productPageURLTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@5b239d7d]" started-at="2025-09-17T03:42:29 IST" name="tearDown" finished-at="2025-09-17T03:42:29 IST" duration-ms="99" status="PASS">
+        </test-method> <!-- userResgistrationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@7e07db1f]" started-at="2025-09-18T07:13:30 IST" name="tearDown" finished-at="2025-09-18T07:13:30 IST" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.opencart.tests.ProductInfoPageTest -->
+      </class> <!-- com.qa.opencart.tests.RegistrationPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
