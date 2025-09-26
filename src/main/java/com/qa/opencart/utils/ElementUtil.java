@@ -22,6 +22,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.opencart.exceptions.BrowserException;
+import com.qa.opencart.factory.DriverFactory;
 
 
 public class ElementUtil {
@@ -29,9 +30,15 @@ public class ElementUtil {
 	private WebDriver driver;
 	private Actions act;
 
+	private JavascriptUtil jsUtil;
+	
+	
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
 		act = new Actions(driver);
+		jsUtil = new JavascriptUtil(driver);
+		
+		
 	}
 
 	private void nullCheck(CharSequence... value) {
@@ -96,7 +103,17 @@ public class ElementUtil {
 	// ================GET WEBELEMENTS USING BY LOCATORS===================
 
 	public WebElement getElement(By locator) {
-		return driver.findElement(locator);
+		WebElement ele = driver.findElement(locator);
+		highlightElement(ele);
+		return ele;
+	}
+	
+	public void highlightElement(WebElement ele) {
+		
+		if(Boolean.parseBoolean(DriverFactory.highlight)) {
+			jsUtil.flash(ele);
+		}
+		
 	}
 	
 //	public WebElement getElement(String locatorType, String locatorValue) {
@@ -110,6 +127,7 @@ public class ElementUtil {
 		ArrayList<String> eleText = new ArrayList<String>();
 
 		for (WebElement e : elements) {
+			//highlightElement(e);
 			String aText = e.getText();
 			if (aText.isEmpty()) {
 				continue;
@@ -380,6 +398,7 @@ public class ElementUtil {
 	// ================GET WEBELEMENTS USING BY LOCATORS===================
 
 	public List<WebElement> getElements(By locator) {
+		
 		return driver.findElements(locator);
 	}
 	
@@ -410,8 +429,9 @@ public class ElementUtil {
 	 */
 	public  WebElement waitForElementVisible(By locator, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		highlightElement(element);
+		return element;
 	}
 	
 	public  List<WebElement> waitForElementsVisible(By locator, int timeout) {
@@ -429,12 +449,16 @@ public class ElementUtil {
 
 	public void clickWhenReady(By locator, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		highlightElement(element);
+		element.click();
 	}
 	
 	public void clickWhenReady(WebElement element, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(element));
+		highlightElement(ele);
+		ele.click();
 	}
 	
 	public void sendKeysWithWait(By locator, int timeout,CharSequence...str ) {

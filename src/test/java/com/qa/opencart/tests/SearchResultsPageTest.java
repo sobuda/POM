@@ -34,6 +34,7 @@ public class SearchResultsPageTest extends BaseTest{
 	@Test
 	public void selectProductTest() {
 		searchPage = accPage.doSearch("mac book");
+		productInfoPage = searchPage.selectProduct("MacBook Pro");
 		String expHeader = productInfoPage.getProductHeader();
 		Assert.assertEquals(expHeader, "MacBook Pro");
 	}

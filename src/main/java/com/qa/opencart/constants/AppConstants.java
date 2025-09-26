@@ -29,4 +29,14 @@ public class AppConstants {
 			//List.of("My Account","My Orders","My Affiliate Account","Newsletter");
 	
 	public static final String REGISTER_SUCCESS_MESSAGE = "Your Account Has Been Created!";
+	
+	/*=================Sheet Name============================*/
+	
+	public static final String EXCEL_REGISTER_SHEET = "Register";
+	public static final String EXCEL_PRODUCT_SHEET = "ProductDetails";
+	
+	
+	public static final String CSV_PRODUCT_SHEET = "TestData";
+
+
 }

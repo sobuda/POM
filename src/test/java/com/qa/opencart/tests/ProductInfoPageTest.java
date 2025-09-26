@@ -11,6 +11,9 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.qa.opencart.base.BaseTest;
+import com.qa.opencart.constants.AppConstants;
+import com.qa.opencart.utils.CSVUtil;
+import com.qa.opencart.utils.ExcelUtil;
 
 public class ProductInfoPageTest extends BaseTest {
 
@@ -57,13 +60,22 @@ public class ProductInfoPageTest extends BaseTest {
 			{"samsung","Samsung Galaxy Tab 10.1",7}
 		};
 	}
+	
+	@DataProvider
+	public Object[][] getProductDataExcel(){
+		return ExcelUtil.getTestData(AppConstants.EXCEL_PRODUCT_SHEET);
+	}
 
-	@Test(dataProvider="productImagesData")
-	public void productImageCountTest(String searchKey,String productName,int expImageCount) {
+	@DataProvider
+	public Object[][] getProductCSVData(){
+		return CSVUtil.getCsvData(AppConstants.CSV_PRODUCT_SHEET);
+	}
+	@Test(dataProvider="getProductCSVData")
+	public void productImageCountTest(String searchKey,String productName,String expImageCount) {
 		searchPage = accPage.doSearch(searchKey);
 		productInfoPage = searchPage.selectProduct(productName);
 		int actImagesCount = productInfoPage.getImageCount();
-		Assert.assertEquals(actImagesCount, expImageCount);
+		Assert.assertEquals(String.valueOf(actImagesCount), expImageCount);
 	}
 	
 	@DataProvider
