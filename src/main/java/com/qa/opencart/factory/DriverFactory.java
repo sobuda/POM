@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.qa.opencart.exceptions.BrowserException;
+import com.qa.opencart.exceptions.FrameWorkException;
 
 public class DriverFactory {
 
@@ -64,11 +65,42 @@ public class DriverFactory {
 		return driver;
 	}
 	
+	//mvn clean install -Denv = "stage"
 	public Properties initProp() {
 		prop = new Properties();
 		
+		String envName = System.getProperty("env");
 		try {
-			FileInputStream fip = new FileInputStream("./src/test/resources/config/config.properties");
+			FileInputStream fip =null ;
+		
+		if(envName==null) {
+			System.out.println("env is null. SO Running Test on QA environment");
+			fip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+		}
+		else {
+			System.out.println("Running Test on env: "+envName);
+			
+			switch (envName) {
+			case "qa":
+				fip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+				break;
+			case "stage":
+				fip = new FileInputStream("./src/test/resources/config/stage.config.properties");
+				break;
+			case "uat":
+				fip = new FileInputStream("./src/test/resources/config/uat.config.properties");
+				break;
+			case "prod":
+				fip = new FileInputStream("./src/test/resources/config/config.properties");
+				break;
+			case "dev":
+				fip = new FileInputStream("./src/test/resources/config/dev.config.properties");
+				break;
+			default:
+				throw new FrameWorkException("======INVALID ENV VAR===============");
+			}
+		}
+		
 			prop.load(fip);
 			
 		} 

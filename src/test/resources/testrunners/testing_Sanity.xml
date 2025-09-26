@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Opencart App Test Regression Suite" verbose="4" thread-count="5" parallel="tests">
+
+
+	<test name="Login Page Test">
+		<parameter name = "browser" value="chrome" />
+
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest"/>
+		</classes>
+	</test>
+	
+	</suite>

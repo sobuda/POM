@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.pages.AccountsPage;
@@ -25,11 +26,19 @@ public class BaseTest {
 	protected ProductInfoPage productInfoPage;
 	protected RegistrationPage registerPage;
 	
+	@Parameters({"browser"})
+	
 	@BeforeTest
 	
-	public void setUp() {
+	public void setUp(String browserName) {
 		df = new DriverFactory();
 		prop = df.initProp();
+		
+		//browserName is passes from testng.xml
+		if(browserName!=null) {
+			prop.setProperty("browser", browserName);
+		}
+		
 		driver = df.intDriver(prop);
 		loginPage = new LoginPage(driver);
 	}

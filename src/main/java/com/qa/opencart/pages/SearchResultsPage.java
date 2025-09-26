@@ -24,6 +24,7 @@ public class SearchResultsPage {
 	}
 	
 	public String searchKeyHeader() {
+		eUtil.waitForElementVisible(headerWithSearchKey, DEFAULT_TIMEOUT);
 		return eUtil.doElementGetText(headerWithSearchKey);
 	}
 
