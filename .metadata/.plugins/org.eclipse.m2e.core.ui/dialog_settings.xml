@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/sowmyabudal/Sowmya_Workspace/POM"/>
+			<item value="/Users/sowmyabudal/Sowmya_Workspace/POM/POM"/>
 			<item value="/Users/sowmyabu/POM"/>
 			<item value="/Users/sowmyabu"/>
 		</list>
