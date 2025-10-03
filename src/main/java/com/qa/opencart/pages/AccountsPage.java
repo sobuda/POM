@@ -1,6 +1,6 @@
 package com.qa.opencart.pages;
 
-import static com.qa.opencart.constants.AppConstants.DEFAULT_TIMEOUT;
+import static com.qa.opencart.constants.AppConstants.*;
 import static com.qa.opencart.constants.AppConstants.HOME_PAGE_FRACT_URL;
 import static com.qa.opencart.constants.AppConstants.HOME_PAGE_TITLE;
 
@@ -34,7 +34,7 @@ public class AccountsPage {
 
 
 	public String getAccountsPageURL() {
-		return eUtil.waitForURLContains(DEFAULT_TIMEOUT, HOME_PAGE_FRACT_URL);
+		return eUtil.waitForURLContains(MEDIUM_DEFAULT_TIMEOUT, HOME_PAGE_FRACT_URL);
 	}
 
 

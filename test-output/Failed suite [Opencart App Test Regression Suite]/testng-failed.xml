@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Failed suite [Opencart App Test Regression Suite]]" guice-stage="DEVELOPMENT" verbose="4">
+  <test thread-count="5" parallel="tests" name="Accounts Page Test(failed)(failed)" verbose="4">
+    <parameter name="browser" value="safari"/>
+    <classes>
+      <class name="com.qa.opencart.tests.AccountsPageTest">
+        <methods>
+          <include name="accPageTitleTest"/>
+          <include name="accPageSetup"/>
+          <include name="setUp"/>
+          <include name="accPageURLTest"/>
+          <include name="accPageHeadersTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.AccountsPageTest -->
+    </classes>
+  </test> <!-- Accounts Page Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Opencart App Test Regression Suite]] -->

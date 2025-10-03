@@ -1,16 +1,21 @@
 package com.qa.opencart.factory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterMethod;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.exceptions.BrowserException;
 import com.qa.opencart.exceptions.FrameWorkException;
 
@@ -30,6 +35,7 @@ public class DriverFactory {
 	 * @param browserName
 	 */
 	public WebDriver intDriver(Properties prop) {
+		
 		String browserName = prop.getProperty("browser");
 		System.out.println("BrowserName: "+browserName);
 		
@@ -58,12 +64,14 @@ public class DriverFactory {
 			System.out.println("Pass Valid Browser Name..." + browserName);
 			throw new BrowserException("======INVALID BROWSER======");
 		}
-		
+		ChainTestListener.log("Initialising driver....");
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		return driver;
 	}
+	
+	
 	
 	//mvn clean install -Denv = "stage"
 	public Properties initProp() {
@@ -110,5 +118,22 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 		return prop;
+	}
+	
+	public static File getScreenShotFile() {
+		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	}
+	
+	public static byte[] getScreenShotByte() {
+		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	}
+	
+	public static String getScreenShotBase64() {
+		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+	}
+	
+	@AfterMethod
+	public void logAfterInitBrowser() {
+		ChainTestListener.log("Initialising driver...."+" DriverFactory");
 	}
 }

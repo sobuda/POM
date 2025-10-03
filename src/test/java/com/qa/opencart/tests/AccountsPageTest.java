@@ -7,9 +7,12 @@ import static com.qa.opencart.constants.AppConstants.*;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.base.BaseTest;
 
 public class AccountsPageTest extends BaseTest {
@@ -19,6 +22,11 @@ public class AccountsPageTest extends BaseTest {
 		accPage =loginPage.doLogin(prop.getProperty("username"),prop.getProperty("password") );
 	}
 	
+	@BeforeMethod
+	public void beforeMethod() {
+		  //log
+		  ChainTestListener.log("Properties: "+prop);
+	}
 	@Test
 	public void accPageTitleTest() {
 		String actTitle = accPage.getAccountsPageTitle();
@@ -36,5 +44,10 @@ public class AccountsPageTest extends BaseTest {
 	public void accPageHeadersTest() {
 		List<String> actHeaders = accPage.getAccPageHeaders();
 		Assert.assertEquals(actHeaders, ACC_PAGE_HEADERS_LIST);
+	}
+	
+	@AfterMethod
+	public void logAfterInitBrowser() {
+		ChainTestListener.log("Initialising driver...."+" Accounts Page");
 	}
 }

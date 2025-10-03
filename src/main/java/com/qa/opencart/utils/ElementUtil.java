@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.exceptions.BrowserException;
 import com.qa.opencart.factory.DriverFactory;
 
@@ -103,6 +104,7 @@ public class ElementUtil {
 	// ================GET WEBELEMENTS USING BY LOCATORS===================
 
 	public WebElement getElement(By locator) {
+		ChainTestListener.log(locator.toString());
 		WebElement ele = driver.findElement(locator);
 		highlightElement(ele);
 		return ele;
