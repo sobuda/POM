@@ -25,6 +25,8 @@ public class DriverFactory {
 	Properties prop;
 	OptionsManager optionsManager ;
 	
+	public static ThreadLocal<WebDriver> thLocal = new ThreadLocal<WebDriver>();
+	
 	public static String highlight;
 	/**
 	 * 
@@ -45,19 +47,23 @@ public class DriverFactory {
 		
 		switch (browserName.toLowerCase().trim()) {
 		case "chrome" :
-			driver = new ChromeDriver(optionsManager.getChromeOptions());
+			thLocal.set(new ChromeDriver(optionsManager.getChromeOptions()));
+			//driver = new ChromeDriver(optionsManager.getChromeOptions());
 			break;
 			
 		case "edge" :
-			driver = new EdgeDriver(optionsManager.getEdgeOptions());
+			thLocal.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+			//driver = new EdgeDriver(optionsManager.getEdgeOptions());
 			break;
 			
 		case "firefox" :
-			driver = new FirefoxDriver(optionsManager.getFirefoxOptions());
+			thLocal.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+			//driver = new FirefoxDriver(optionsManager.getFirefoxOptions());
 			break;
 			
 		case "safari" :
-			driver = new SafariDriver();
+			thLocal.set(new SafariDriver());
+			//driver = new SafariDriver();
 			break;
 			
 		default:
@@ -65,13 +71,15 @@ public class DriverFactory {
 			throw new BrowserException("======INVALID BROWSER======");
 		}
 		ChainTestListener.log("Initialising driver....");
-		driver.get(prop.getProperty("url"));
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		return driver;
+		getWebDriver().get(prop.getProperty("url"));
+		getWebDriver().manage().window().maximize();
+		getWebDriver().manage().deleteAllCookies();
+		return getWebDriver();
 	}
 	
-	
+	public static WebDriver getWebDriver() {
+		return thLocal.get();
+	}
 	
 	//mvn clean install -Denv = "stage"
 	public Properties initProp() {
@@ -121,15 +129,15 @@ public class DriverFactory {
 	}
 	
 	public static File getScreenShotFile() {
-		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.FILE);
 	}
 	
 	public static byte[] getScreenShotByte() {
-		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
 	}
 	
 	public static String getScreenShotBase64() {
-		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+		return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BASE64);
 	}
 	
 	@AfterMethod

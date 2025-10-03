@@ -3,6 +3,7 @@ package com.qa.opencart.base;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +16,7 @@ import com.qa.opencart.pages.LoginPage;
 import com.qa.opencart.pages.ProductInfoPage;
 import com.qa.opencart.pages.RegistrationPage;
 import com.qa.opencart.pages.SearchResultsPage;
+import com.qa.opencart.utils.JavascriptUtil;
 
 public class BaseTest {
 
@@ -50,7 +52,12 @@ public class BaseTest {
 	public void logAfterInitBrowser() {
 		ChainTestListener.log("Initialising driver...."+" Base Test");
 	}
-
+	@AfterMethod
+	public void attachScreenShot(ITestResult result) {
+		if(!(result.isSuccess())) {
+			ChainTestListener.embed(DriverFactory.getScreenShotBase64(), "image/png");
+		}
+	}
 	@AfterTest
 	
 	public void tearDown() {

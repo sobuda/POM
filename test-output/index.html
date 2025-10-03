@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Opencart App Test Sanity Suite</span>
+            <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Opencart App Test Regression Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
-                    <span>testing_Sanity.xml</span>
+                  <a href="#" panel-name="test-xml-Opencart_App_Test_Regression_Suite" class="navigator-link ">
+                    <span>testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                  <a href="#" panel-name="testlist-Opencart_App_Test_Regression_Suite" class="navigator-link ">
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Opencart_App_Test_Regression_Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Opencart_App_Test_Regression_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Opencart_App_Test_Regression_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Opencart_App_Test_Regression_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Opencart_App_Test_Sanity_Suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Opencart_App_Test_Regression_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,56 +92,160 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">27 methods, 1 failed,   26 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" class="hide-methods failed suite-Opencart_App_Test_Regression_Suite"> (hide)</a> <!-- hide-methods failed suite-Opencart_App_Test_Regression_Suite -->
+                      <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" class="show-methods failed suite-Opencart_App_Test_Regression_Suite"> (show)</a> <!-- show-methods failed suite-Opencart_App_Test_Regression_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Opencart_App_Test_Regression_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Opencart_App_Test_Regression_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" class="hide-methods passed suite-Opencart_App_Test_Sanity_Suite"> (hide)</a> <!-- hide-methods passed suite-Opencart_App_Test_Sanity_Suite -->
-                      <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" class="show-methods passed suite-Opencart_App_Test_Sanity_Suite"> (show)</a> <!-- show-methods passed suite-Opencart_App_Test_Sanity_Suite -->
+                      <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" class="hide-methods passed suite-Opencart_App_Test_Regression_Suite"> (hide)</a> <!-- hide-methods passed suite-Opencart_App_Test_Regression_Suite -->
+                      <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" class="show-methods passed suite-Opencart_App_Test_Regression_Suite"> (show)</a> <!-- show-methods passed suite-Opencart_App_Test_Regression_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Opencart_App_Test_Sanity_Suite">
+                    <div class="method-list-content passed suite-Opencart_App_Test_Regression_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.AccountsPageTest" class="method navigator-link" hash-for-method="accPageHeadersTest">accPageHeadersTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.AccountsPageTest" class="method navigator-link" hash-for-method="accPageHeadersTest">accPageHeadersTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.AccountsPageTest" class="method navigator-link" hash-for-method="accPageTitleTest">accPageTitleTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.AccountsPageTest" class="method navigator-link" hash-for-method="accPageTitleTest">accPageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.AccountsPageTest" class="method navigator-link" hash-for-method="accPageURLTest">accPageURLTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.AccountsPageTest" class="method navigator-link" hash-for-method="accPageURLTest">accPageURLTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="dologinTest">dologinTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="dologinTest">dologinTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="forgotPswLinkExist">forgotPswLinkExist</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="forgotPswLinkExist">forgotPswLinkExist</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="forgotpsw">forgotpsw</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="forgotpsw">forgotpsw</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="loginPageURLTest">loginPageURLTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Opencart_App_Test_Sanity_Suite" title="com.qa.opencart.tests.LoginPageTest" class="method navigator-link" hash-for-method="loginPageURLTest">loginPageURLTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productHeaderTest(macbook, MacBook Air)">productHeaderTest(macbook, MacBook Air)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Opencart_App_Test_Sanity_Suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productHeaderTest(samsung, Samsung SyncMaster 941BW)">productHeaderTest(samsung, Samsung SyncMaster 941BW)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productHeaderTest(macbook, MacBook Pro)">productHeaderTest(macbook, MacBook Pro)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productHeaderTest(imac, iMac)">productHeaderTest(imac, iMac)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productHeaderTest(samsung, Samsung Galaxy Tab 10.1)">productHeaderTest(samsung, Samsung Galaxy Tab 10.1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productImageCountTest(macbook, MacBook Pro, 4)">productImageCountTest(macbook, MacBook Pro, 4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productImageCountTest(macbook, MacBook Air, 4)">productImageCountTest(macbook, MacBook Air, 4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productImageCountTest(samsung, Samsung SyncMaster 941BW, 1)">productImageCountTest(samsung, Samsung SyncMaster 941BW, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productImageCountTest(samsung, Samsung Galaxy Tab 10.1, 7)">productImageCountTest(samsung, Samsung Galaxy Tab 10.1, 7)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productImageCountTest(imac, iMac, 3)">productImageCountTest(imac, iMac, 3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productMetaDataTest(macbook, MacBook Air, Apple, Product 17, 700, Out Of Stock, $1,202.00, $1,000.00)">productMetaDataTest(macbook, MacBook Air, Apple, Product 17, 700, Out Of Stock, $1,202.00, $1,000.00)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productMetaDataTest(imac, iMac, Apple, Product 14, null, Out Of Stock, $122.00, $100.00)">productMetaDataTest(imac, iMac, Apple, Product 14, null, Out Of Stock, $122.00, $100.00)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productMetaDataTest(samsung, Samsung SyncMaster 941BW, null, Product 6, null, 2-3 Days, $242.00, $200.00)">productMetaDataTest(samsung, Samsung SyncMaster 941BW, null, Product 6, null, 2-3 Days, $242.00, $200.00)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productMetaDataTest(macbook, MacBook Pro, Apple, Product 18, 800, Out Of Stock, $2,000.00, $2,000.00)">productMetaDataTest(macbook, MacBook Pro, Apple, Product 18, 800, Out Of Stock, $2,000.00, $2,000.00)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productMetaDataTest(samsung, Samsung Galaxy Tab 10.1, null, SAM1, 1000, Pre-Order, $241.99, $199.99)">productMetaDataTest(samsung, Samsung Galaxy Tab 10.1, null, SAM1, 1000, Pre-Order, $241.99, $199.99)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.ProductInfoPageTest" class="method navigator-link" hash-for-method="productPageURLTest">productPageURLTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.SearchResultsPageTest" class="method navigator-link" hash-for-method="searchPageHeadertest">searchPageHeadertest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.SearchResultsPageTest" class="method navigator-link" hash-for-method="searchResultsTest">searchResultsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Opencart_App_Test_Regression_Suite" title="com.qa.opencart.tests.SearchResultsPageTest" class="method navigator-link" hash-for-method="selectProductTest">selectProductTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Opencart_App_Test_Regression_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -152,8 +256,34 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Opencart_App_Test_Sanity_Suite" class="panel Opencart_App_Test_Sanity_Suite">
-          <div class="suite-Opencart_App_Test_Sanity_Suite-class-passed">
+        <div panel-name="suite-Opencart_App_Test_Regression_Suite" class="panel Opencart_App_Test_Regression_Suite">
+          <div class="suite-Opencart_App_Test_Regression_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.opencart.tests.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginPageTitleTest">
+                  </a> <!-- loginPageTitleTest -->
+                  <span class="method-name">loginPageTitleTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Account Login11] but found [null]
+	at com.qa.opencart.tests.LoginPageTest.loginPageTitleTest(LoginPageTest.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Login Page title Check)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Opencart_App_Test_Regression_Suite-class-failed -->
+          <div class="suite-Opencart_App_Test_Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.qa.opencart.tests.AccountsPageTest</span>
@@ -181,8 +311,8 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Opencart_App_Test_Sanity_Suite-class-passed -->
-          <div class="suite-Opencart_App_Test_Sanity_Suite-class-passed">
+          </div> <!-- suite-Opencart_App_Test_Regression_Suite-class-passed -->
+          <div class="suite-Opencart_App_Test_Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.qa.opencart.tests.LoginPageTest</span>
@@ -217,15 +347,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPageTitleTest">
-                  </a> <!-- loginPageTitleTest -->
-                  <span class="method-name">loginPageTitleTest</span>
-                  <em>
-(Login Page title Check)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="loginPageURLTest">
                   </a> <!-- loginPageURLTest -->
                   <span class="method-name">loginPageURLTest</span>
@@ -234,39 +355,215 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Opencart_App_Test_Sanity_Suite-class-passed -->
-        </div> <!-- panel Opencart_App_Test_Sanity_Suite -->
-        <div panel-name="test-xml-Opencart_App_Test_Sanity_Suite" class="panel">
+          </div> <!-- suite-Opencart_App_Test_Regression_Suite-class-passed -->
+          <div class="suite-Opencart_App_Test_Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.opencart.tests.SearchResultsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchPageHeadertest">
+                  </a> <!-- searchPageHeadertest -->
+                  <span class="method-name">searchPageHeadertest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchResultsTest">
+                  </a> <!-- searchResultsTest -->
+                  <span class="method-name">searchResultsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectProductTest">
+                  </a> <!-- selectProductTest -->
+                  <span class="method-name">selectProductTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Opencart_App_Test_Regression_Suite-class-passed -->
+          <div class="suite-Opencart_App_Test_Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.opencart.tests.ProductInfoPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="productHeaderTest(macbook, MacBook Air)">
+                  </a> <!-- productHeaderTest(macbook, MacBook Air) -->
+                  <span class="method-name">productHeaderTest</span>
+                  <span class="parameters">(macbook,MacBook Air)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productHeaderTest(samsung, Samsung SyncMaster 941BW)">
+                  </a> <!-- productHeaderTest(samsung, Samsung SyncMaster 941BW) -->
+                  <span class="method-name">productHeaderTest</span>
+                  <span class="parameters">(samsung,Samsung SyncMaster 941BW)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productHeaderTest(macbook, MacBook Pro)">
+                  </a> <!-- productHeaderTest(macbook, MacBook Pro) -->
+                  <span class="method-name">productHeaderTest</span>
+                  <span class="parameters">(macbook,MacBook Pro)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productHeaderTest(imac, iMac)">
+                  </a> <!-- productHeaderTest(imac, iMac) -->
+                  <span class="method-name">productHeaderTest</span>
+                  <span class="parameters">(imac,iMac)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productHeaderTest(samsung, Samsung Galaxy Tab 10.1)">
+                  </a> <!-- productHeaderTest(samsung, Samsung Galaxy Tab 10.1) -->
+                  <span class="method-name">productHeaderTest</span>
+                  <span class="parameters">(samsung,Samsung Galaxy Tab 10.1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productImageCountTest(macbook, MacBook Pro, 4)">
+                  </a> <!-- productImageCountTest(macbook, MacBook Pro, 4) -->
+                  <span class="method-name">productImageCountTest</span>
+                  <span class="parameters">(macbook,MacBook Pro,4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productImageCountTest(macbook, MacBook Air, 4)">
+                  </a> <!-- productImageCountTest(macbook, MacBook Air, 4) -->
+                  <span class="method-name">productImageCountTest</span>
+                  <span class="parameters">(macbook,MacBook Air,4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productImageCountTest(samsung, Samsung SyncMaster 941BW, 1)">
+                  </a> <!-- productImageCountTest(samsung, Samsung SyncMaster 941BW, 1) -->
+                  <span class="method-name">productImageCountTest</span>
+                  <span class="parameters">(samsung,Samsung SyncMaster 941BW,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productImageCountTest(samsung, Samsung Galaxy Tab 10.1, 7)">
+                  </a> <!-- productImageCountTest(samsung, Samsung Galaxy Tab 10.1, 7) -->
+                  <span class="method-name">productImageCountTest</span>
+                  <span class="parameters">(samsung,Samsung Galaxy Tab 10.1,7)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productImageCountTest(imac, iMac, 3)">
+                  </a> <!-- productImageCountTest(imac, iMac, 3) -->
+                  <span class="method-name">productImageCountTest</span>
+                  <span class="parameters">(imac,iMac,3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productMetaDataTest(macbook, MacBook Air, Apple, Product 17, 700, Out Of Stock, $1,202.00, $1,000.00)">
+                  </a> <!-- productMetaDataTest(macbook, MacBook Air, Apple, Product 17, 700, Out Of Stock, $1,202.00, $1,000.00) -->
+                  <span class="method-name">productMetaDataTest</span>
+                  <span class="parameters">(macbook,MacBook Air,Apple,Product 17,700,Out Of Stock,$1,202.00,$1,000.00)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productMetaDataTest(imac, iMac, Apple, Product 14, null, Out Of Stock, $122.00, $100.00)">
+                  </a> <!-- productMetaDataTest(imac, iMac, Apple, Product 14, null, Out Of Stock, $122.00, $100.00) -->
+                  <span class="method-name">productMetaDataTest</span>
+                  <span class="parameters">(imac,iMac,Apple,Product 14,null,Out Of Stock,$122.00,$100.00)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productMetaDataTest(samsung, Samsung SyncMaster 941BW, null, Product 6, null, 2-3 Days, $242.00, $200.00)">
+                  </a> <!-- productMetaDataTest(samsung, Samsung SyncMaster 941BW, null, Product 6, null, 2-3 Days, $242.00, $200.00) -->
+                  <span class="method-name">productMetaDataTest</span>
+                  <span class="parameters">(samsung,Samsung SyncMaster 941BW,null,Product 6,null,2-3 Days,$242.00,$200.00)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productMetaDataTest(macbook, MacBook Pro, Apple, Product 18, 800, Out Of Stock, $2,000.00, $2,000.00)">
+                  </a> <!-- productMetaDataTest(macbook, MacBook Pro, Apple, Product 18, 800, Out Of Stock, $2,000.00, $2,000.00) -->
+                  <span class="method-name">productMetaDataTest</span>
+                  <span class="parameters">(macbook,MacBook Pro,Apple,Product 18,800,Out Of Stock,$2,000.00,$2,000.00)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productMetaDataTest(samsung, Samsung Galaxy Tab 10.1, null, SAM1, 1000, Pre-Order, $241.99, $199.99)">
+                  </a> <!-- productMetaDataTest(samsung, Samsung Galaxy Tab 10.1, null, SAM1, 1000, Pre-Order, $241.99, $199.99) -->
+                  <span class="method-name">productMetaDataTest</span>
+                  <span class="parameters">(samsung,Samsung Galaxy Tab 10.1,null,SAM1,1000,Pre-Order,$241.99,$199.99)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productPageURLTest">
+                  </a> <!-- productPageURLTest -->
+                  <span class="method-name">productPageURLTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Opencart_App_Test_Regression_Suite-class-passed -->
+        </div> <!-- panel Opencart_App_Test_Regression_Suite -->
+        <div panel-name="test-xml-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/sowmyabudal/Sowmya_Workspace/OpenCartProject/POM_OpenCart/src/test/resources/testrunners/testing_Sanity.xml</span>
+            <span class="header-content">/Users/sowmyabudal/Sowmya_Workspace/OpenCartProject/POM_OpenCart/src/test/resources/testrunners/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;tests&quot; name=&quot;Opencart App Test Sanity Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;4&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Opencart App Test Regression Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.aventstack.chaintest.plugins.ChainTestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Login Page Test&quot; verbose=&quot;4&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Login Page Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.opencart.tests.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login Page Test --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Accounts Page Test&quot; verbose=&quot;4&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Accounts Page Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.opencart.tests.AccountsPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Accounts Page Test --&gt;
-&lt;/suite&gt; &lt;!-- Opencart App Test Sanity Suite --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Saerch Results Page Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.tests.SearchResultsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Saerch Results Page Test --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Product Info Page Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.opencart.tests.ProductInfoPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Product Info Page Test --&gt;
+&lt;/suite&gt; &lt;!-- Opencart App Test Regression Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Opencart_App_Test_Sanity_Suite" class="panel">
+        <div panel-name="testlist-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Opencart App Test Sanity Suite</span>
+            <span class="header-content">Tests for Opencart App Test Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
@@ -276,88 +573,170 @@
               <li>
                 <span class="test-name">Accounts Page Test (1 class)</span>
               </li>
+              <li>
+                <span class="test-name">Saerch Results Page Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Product Info Page Test (1 class)</span>
+              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Opencart_App_Test_Sanity_Suite" class="panel">
+        <div panel-name="group-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Opencart App Test Sanity Suite</span>
+            <span class="header-content">Groups for Opencart App Test Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Opencart_App_Test_Sanity_Suite" class="panel">
+        <div panel-name="times-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Opencart App Test Sanity Suite</span>
+            <span class="header-content">Times for Opencart App Test Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Opencart_App_Test_Sanity_Suite');
-function tableData_Opencart_App_Test_Sanity_Suite() {
+suiteTableInitFunctions.push('tableData_Opencart_App_Test_Regression_Suite');
+function tableData_Opencart_App_Test_Regression_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(27);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'dologinTest')
+data.setCell(0, 1, 'loginPageTitleTest')
 data.setCell(0, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(0, 3, 3184);
+data.setCell(0, 3, 10295);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'forgotPswLinkExist')
-data.setCell(1, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(1, 3, 571);
+data.setCell(1, 1, 'productHeaderTest')
+data.setCell(1, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(1, 3, 4169);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'accPageHeadersTest')
-data.setCell(2, 2, 'com.qa.opencart.tests.AccountsPageTest')
-data.setCell(2, 3, 141);
+data.setCell(2, 1, 'selectProductTest')
+data.setCell(2, 2, 'com.qa.opencart.tests.SearchResultsPageTest')
+data.setCell(2, 3, 3599);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginPageTitleTest')
+data.setCell(3, 1, 'dologinTest')
 data.setCell(3, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(3, 3, 20);
+data.setCell(3, 3, 3205);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginPageURLTest')
-data.setCell(4, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(4, 3, 19);
+data.setCell(4, 1, 'productHeaderTest')
+data.setCell(4, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(4, 3, 3020);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'accPageTitleTest')
-data.setCell(5, 2, 'com.qa.opencart.tests.AccountsPageTest')
-data.setCell(5, 3, 15);
+data.setCell(5, 1, 'productHeaderTest')
+data.setCell(5, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(5, 3, 2353);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'accPageURLTest')
-data.setCell(6, 2, 'com.qa.opencart.tests.AccountsPageTest')
-data.setCell(6, 3, 15);
+data.setCell(6, 1, 'searchPageHeadertest')
+data.setCell(6, 2, 'com.qa.opencart.tests.SearchResultsPageTest')
+data.setCell(6, 3, 1917);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'forgotpsw')
-data.setCell(7, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(7, 3, 1);
-window.suiteTableData['Opencart_App_Test_Sanity_Suite']= { tableData: data, tableDiv: 'times-div-Opencart_App_Test_Sanity_Suite'}
+data.setCell(7, 1, 'productHeaderTest')
+data.setCell(7, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(7, 3, 1622);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'productHeaderTest')
+data.setCell(8, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(8, 3, 1580);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'productImageCountTest')
+data.setCell(9, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(9, 3, 1442);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'productImageCountTest')
+data.setCell(10, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(10, 3, 1412);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'productImageCountTest')
+data.setCell(11, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(11, 3, 1339);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'productImageCountTest')
+data.setCell(12, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(12, 3, 1323);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'productImageCountTest')
+data.setCell(13, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(13, 3, 1263);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'productMetaDataTest')
+data.setCell(14, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(14, 3, 1136);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'productMetaDataTest')
+data.setCell(15, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(15, 3, 1132);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'searchResultsTest')
+data.setCell(16, 2, 'com.qa.opencart.tests.SearchResultsPageTest')
+data.setCell(16, 3, 1125);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'productMetaDataTest')
+data.setCell(17, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(17, 3, 1059);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'productMetaDataTest')
+data.setCell(18, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(18, 3, 1038);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'productPageURLTest')
+data.setCell(19, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(19, 3, 975);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'productMetaDataTest')
+data.setCell(20, 2, 'com.qa.opencart.tests.ProductInfoPageTest')
+data.setCell(20, 3, 967);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'forgotPswLinkExist')
+data.setCell(21, 2, 'com.qa.opencart.tests.LoginPageTest')
+data.setCell(21, 3, 914);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'accPageHeadersTest')
+data.setCell(22, 2, 'com.qa.opencart.tests.AccountsPageTest')
+data.setCell(22, 3, 174);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'accPageTitleTest')
+data.setCell(23, 2, 'com.qa.opencart.tests.AccountsPageTest')
+data.setCell(23, 3, 14);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'accPageURLTest')
+data.setCell(24, 2, 'com.qa.opencart.tests.AccountsPageTest')
+data.setCell(24, 3, 10);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'loginPageURLTest')
+data.setCell(25, 2, 'com.qa.opencart.tests.LoginPageTest')
+data.setCell(25, 3, 10);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'forgotpsw')
+data.setCell(26, 2, 'com.qa.opencart.tests.LoginPageTest')
+data.setCell(26, 3, 2);
+window.suiteTableData['Opencart_App_Test_Regression_Suite']= { tableData: data, tableDiv: 'times-div-Opencart_App_Test_Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
-              <div id="times-div-Opencart_App_Test_Sanity_Suite">
-              </div> <!-- times-div-Opencart_App_Test_Sanity_Suite -->
+              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <div id="times-div-Opencart_App_Test_Regression_Suite">
+              </div> <!-- times-div-Opencart_App_Test_Regression_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Opencart_App_Test_Sanity_Suite" class="panel">
+        <div panel-name="reporter-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Opencart App Test Sanity Suite</span>
+            <span class="header-content">Reporter output for Opencart App Test Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Opencart_App_Test_Sanity_Suite" class="panel">
+        <div panel-name="ignored-methods-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Opencart_App_Test_Sanity_Suite" class="panel">
+        <div panel-name="chronological-Opencart_App_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -375,102 +754,433 @@ return data;
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">accPageSetup</span>
-                <span class="method-start">9487 ms</span>
-              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.SearchResultsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">forgotPswLinkExist</span>
-                <span class="method-start">9584 ms</span>
+                <span class="method-start">10605 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.SearchResultsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">searchPageSetUp</span>
+                <span class="method-start">10672 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">productPageSetup</span>
+                <span class="method-start">10844 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">accPageSetup</span>
+                <span class="method-start">11228 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=forgotPswLinkExist status=SUCCESS method=LoginPageTest.forgotPswLinkExist()[pri:0, ...)</span>
+                <span class="method-start">11524 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">10159 ms</span>
+                <span class="method-start">11525 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">forgotpsw</span>
-                <span class="method-start">10161 ms</span>
+                <span class="method-start">11529 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=forgotpsw status=SUCCESS method=LoginPageTest.forgotpsw()[pri:0, instance:com.qa.op...)</span>
+                <span class="method-start">11533 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
                 <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">10163 ms</span>
+                <span class="method-start">11534 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">10163 ms</span>
+                <span class="method-start">11535 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">10191 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.SearchResultsPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">loginPageURLTest</span>
-                <span class="method-start">10193 ms</span>
+                <span class="method-name">searchPageHeadertest</span>
+                <span class="method-start">14912 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">10213 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">dologinTest</span>
-                <span class="method-start">10214 ms</span>
+                <span class="method-name">productHeaderTest(macbook, MacBook Pro)</span>
+                <span class="method-start">15161 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.AccountsPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">12947 ms</span>
+                <span class="method-start">15651 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">accPageHeadersTest</span>
-                <span class="method-start">12948 ms</span>
+                <span class="method-start">15653 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">13093 ms</span>
+                <span class="method-start">15830 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=accPageHeadersTest status=SUCCESS method=AccountsPageTest.accPageHeadersTest()[pri:...)</span>
+                <span class="method-start">15831 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">accPageTitleTest</span>
-                <span class="method-start">13094 ms</span>
+                <span class="method-start">15832 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">13094 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">13111 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">13112 ms</span>
+                <span class="method-start">15832 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">accPageURLTest</span>
-                <span class="method-start">13112 ms</span>
+                <span class="method-start">15848 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">15848 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">13129 ms</span>
+                <span class="method-start">15848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=accPageTitleTest status=SUCCESS method=AccountsPageTest.accPageTitleTest()[pri:0, i...)</span>
+                <span class="method-start">15848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">15861 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=accPageURLTest status=SUCCESS method=AccountsPageTest.accPageURLTest()[pri:0, insta...)</span>
+                <span class="method-start">15862 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13130 ms</span>
+                <span class="method-start">15863 ms</span>
               </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.SearchResultsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">16836 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=searchPageHeadertest status=SUCCESS method=SearchResultsPageTest.searchPageHeaderte...)</span>
+                <span class="method-start">16836 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">searchResultsTest</span>
+                <span class="method-start">16838 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=searchResultsTest status=SUCCESS method=SearchResultsPageTest.searchResultsTest()[p...)</span>
+                <span class="method-start">17971 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">17974 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">selectProductTest</span>
+                <span class="method-start">17977 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productHeaderTest status=SUCCESS method=ProductInfoPageTest.productHeaderTest(java....)</span>
+                <span class="method-start">19334 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">19335 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productHeaderTest(macbook, MacBook Air)</span>
+                <span class="method-start">19336 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.SearchResultsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">21580 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=selectProductTest status=SUCCESS method=SearchResultsPageTest.selectProductTest()[p...)</span>
+                <span class="method-start">21580 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">21581 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">21693 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productHeaderTest status=SUCCESS method=ProductInfoPageTest.productHeaderTest(java....)</span>
+                <span class="method-start">21693 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productHeaderTest(imac, iMac)</span>
+                <span class="method-start">21694 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=loginPageTitleTest status=FAILURE method=LoginPageTest.loginPageTitleTest()[pri:0, ...)</span>
+                <span class="method-start">21834 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">22042 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">loginPageURLTest</span>
+                <span class="method-start">22043 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=loginPageURLTest status=SUCCESS method=LoginPageTest.loginPageURLTest()[pri:0, inst...)</span>
+                <span class="method-start">22055 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">dologinTest</span>
+                <span class="method-start">22056 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">22056 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">24717 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productHeaderTest status=SUCCESS method=ProductInfoPageTest.productHeaderTest(java....)</span>
+                <span class="method-start">24717 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productHeaderTest(samsung, Samsung SyncMaster 941BW)</span>
+                <span class="method-start">24718 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">logAfterInitBrowser</span>
-                <span class="method-start">13402 ms</span>
+                <span class="method-start">25262 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=dologinTest status=SUCCESS method=LoginPageTest.dologinTest()[pri:32767, instance:c...)</span>
+                <span class="method-start">25262 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13403 ms</span>
+                <span class="method-start">25263 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.ProductInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">26341 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productHeaderTest status=SUCCESS method=ProductInfoPageTest.productHeaderTest(java....)</span>
+                <span class="method-start">26341 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productHeaderTest(samsung, Samsung Galaxy Tab 10.1)</span>
+                <span class="method-start">26342 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productHeaderTest status=SUCCESS method=ProductInfoPageTest.productHeaderTest(java....)</span>
+                <span class="method-start">27923 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">27925 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productImageCountTest(macbook, MacBook Pro, 4)</span>
+                <span class="method-start">27941 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productImageCountTest status=SUCCESS method=ProductInfoPageTest.productImageCountTe...)</span>
+                <span class="method-start">29281 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productImageCountTest(macbook, MacBook Air, 4)</span>
+                <span class="method-start">29282 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">29282 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productImageCountTest status=SUCCESS method=ProductInfoPageTest.productImageCountTe...)</span>
+                <span class="method-start">30726 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">30727 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productImageCountTest(imac, iMac, 3)</span>
+                <span class="method-start">30727 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productImageCountTest status=SUCCESS method=ProductInfoPageTest.productImageCountTe...)</span>
+                <span class="method-start">31992 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">31993 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productImageCountTest(samsung, Samsung SyncMaster 941BW, 1)</span>
+                <span class="method-start">31995 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productImageCountTest status=SUCCESS method=ProductInfoPageTest.productImageCountTe...)</span>
+                <span class="method-start">33319 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productImageCountTest(samsung, Samsung Galaxy Tab 10.1, 7)</span>
+                <span class="method-start">33320 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">33320 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productImageCountTest status=SUCCESS method=ProductInfoPageTest.productImageCountTe...)</span>
+                <span class="method-start">34733 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">34736 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productMetaDataTest(macbook, MacBook Pro, Apple, Product 18, 800, Out Of Stock, $2,000.00, $2,000.00)</span>
+                <span class="method-start">34737 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productMetaDataTest status=SUCCESS method=ProductInfoPageTest.productMetaDataTest(j...)</span>
+                <span class="method-start">35872 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">35873 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productMetaDataTest(macbook, MacBook Air, Apple, Product 17, 700, Out Of Stock, $1,202.00, $1,000.00)</span>
+                <span class="method-start">35875 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productMetaDataTest status=SUCCESS method=ProductInfoPageTest.productMetaDataTest(j...)</span>
+                <span class="method-start">37012 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">37013 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productMetaDataTest(imac, iMac, Apple, Product 14, null, Out Of Stock, $122.00, $100.00)</span>
+                <span class="method-start">37014 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productMetaDataTest status=SUCCESS method=ProductInfoPageTest.productMetaDataTest(j...)</span>
+                <span class="method-start">38076 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">38076 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productMetaDataTest(samsung, Samsung SyncMaster 941BW, null, Product 6, null, 2-3 Days, $242.00, $200.00)</span>
+                <span class="method-start">38078 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productMetaDataTest status=SUCCESS method=ProductInfoPageTest.productMetaDataTest(j...)</span>
+                <span class="method-start">39118 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">39119 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productMetaDataTest(samsung, Samsung Galaxy Tab 10.1, null, SAM1, 1000, Pre-Order, $241.99, $199.99)</span>
+                <span class="method-start">39119 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">40087 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productMetaDataTest status=SUCCESS method=ProductInfoPageTest.productMetaDataTest(j...)</span>
+                <span class="method-start">40087 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">productPageURLTest</span>
+                <span class="method-start">40088 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenShot([TestResult name=productPageURLTest status=SUCCESS method=ProductInfoPageTest.productPageURLTest()[p...)</span>
+                <span class="method-start">41064 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logAfterInitBrowser</span>
+                <span class="method-start">41065 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">41067 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

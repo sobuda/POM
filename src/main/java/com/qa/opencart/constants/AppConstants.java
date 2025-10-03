@@ -11,7 +11,7 @@ public class AppConstants {
 	
 	public static final int LONG_DEFAULT_TIMEOUT = 15;
 
-	public static final String LOGIN_PAGE_TITLE = "Account Login";
+	public static final String LOGIN_PAGE_TITLE = "Account Login11";
 	
 	public static final String LOGIN_PAGE_FRACT_URL = "account/login";
 

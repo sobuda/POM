@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Opencart App Test Regression Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Accounts Page Test(failed)">
+  <listeners>
+    <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Login Page Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.opencart.tests.AccountsPageTest">
+      <class name="com.qa.opencart.tests.LoginPageTest">
         <methods>
-          <include name="accPageSetup"/>
+          <include name="loginPageTitleTest"/>
+          <include name="logAfterInitBrowser"/>
           <include name="setUp"/>
-          <include name="accPageHeadersTest"/>
+          <include name="attachScreenShot"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.opencart.tests.AccountsPageTest -->
+      </class> <!-- com.qa.opencart.tests.LoginPageTest -->
     </classes>
-  </test> <!-- Accounts Page Test(failed) -->
+  </test> <!-- Login Page Test(failed) -->
 </suite> <!-- Failed suite [Opencart App Test Regression Suite] -->

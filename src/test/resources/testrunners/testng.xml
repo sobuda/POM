@@ -3,6 +3,10 @@
 <!--verbose="4"-->
 <suite name="Opencart App Test Regression Suite"  thread-count="5" parallel="tests">
 
+<listeners>
+	<listener class-name ="com.aventstack.chaintest.plugins.ChainTestListener"/>
+
+</listeners>
 
 	<test name="Login Page Test">
 		<parameter name = "browser" value="chrome" />
