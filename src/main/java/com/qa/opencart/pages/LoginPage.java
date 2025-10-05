@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import  static com.qa.opencart.constants.AppConstants.*;
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class LoginPage {
 
 	private WebDriver driver;
@@ -26,23 +28,24 @@ public class LoginPage {
 	
 	
 	//3. Public Page Methods/Actions
-	
+	@Step("Step1: Get LoginPage Title")
 	public String getLoginPageTitle() {
 		String pageTitle = eUtil.waitForTitle(DEFAULT_TIMEOUT, LOGIN_PAGE_TITLE);
 		System.out.println("Page Title: "+pageTitle);
 		return pageTitle;
 	}
-	
+	@Step("Step 2: Get LoginPage Url")
 	public String getLoginPageURL() {
 		String pageURL = eUtil.waitForURLContains(DEFAULT_TIMEOUT, LOGIN_PAGE_FRACT_URL);
 		System.out.println("Page Title: "+pageURL);
 		return pageURL;
 	}
-	
+	@Step("Step 3: Check for Forgot Password Link")
 	public boolean isForgotPswLinkExist() {
 		return eUtil.isElementDisplayed(forgotPswLink);
 	}
 	
+	@Step("Step 4: Check Login with Valid credentials username: {0} password: {1}")
 	public AccountsPage doLogin(String username, String password) {
 		System.out.println("User credentials:"+username+": "+password);
 		eUtil.waitForElementVisible(email, DEFAULT_TIMEOUT).sendKeys(username);
@@ -52,6 +55,7 @@ public class LoginPage {
 		return new AccountsPage(driver);
 	}
 	
+	@Step("Step 5: Navigate to Registration Page")
 	public RegistrationPage navigateToRegisterPage() {
 		eUtil.clickWhenReady(RegisterLink, DEFAULT_TIMEOUT);
 		return new RegistrationPage(driver);

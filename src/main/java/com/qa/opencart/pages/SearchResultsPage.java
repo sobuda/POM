@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import static com.qa.opencart.constants.AppConstants.*;
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class SearchResultsPage {
 
 	private WebDriver driver;
@@ -23,16 +25,19 @@ public class SearchResultsPage {
 		eUtil = new ElementUtil(driver);
 	}
 	
+	@Step("Step 1: Get the Header with SearchKey")
 	public String searchKeyHeader() {
 		eUtil.waitForElementVisible(headerWithSearchKey, DEFAULT_TIMEOUT);
 		return eUtil.doElementGetText(headerWithSearchKey);
 	}
 
+	@Step("Step 2: Get List of searchResults")
 	public List<WebElement> searchResults() {
 		List<WebElement> productsEle = eUtil.waitForElementsVisible(searchResults, DEFAULT_TIMEOUT);
 		return productsEle;
 	}
 
+	@Step("Step 3: Select product: {0}")
 	public ProductInfoPage selectProduct(String productName) {
 		eUtil.waitForElementVisible(By.linkText(productName), DEFAULT_TIMEOUT).click();
 		return new ProductInfoPage(driver);

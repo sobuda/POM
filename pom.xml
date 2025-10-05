@@ -13,6 +13,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
+		<allure.version>2.24.0</allure.version>
+		<aspectj.version>1.9.20.1</aspectj.version>
 	</properties>
 
 
@@ -57,7 +59,19 @@
   			<artifactId>chaintest-testng</artifactId>
 			<version>1.0.12</version>
   
-</dependency>
+		</dependency>
+
+		<dependency>
+       	 <groupId>io.qameta.allure</groupId>
+        	<artifactId>allure-testng</artifactId>
+        	<version>${allure.version}</version>
+    	</dependency>
+    
+    <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
 		
 	</dependencies>
 
@@ -78,14 +92,26 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.4</version>
         <configuration>
-<!--					<parallel>methods</parallel>-->
-<!--					<threadCount>4</threadCount>-->
-<!--					<forkCount>1</forkCount>-->
-<!--					<reuseForks>true</reuseForks>-->
+					<!--					<parallel>methods</parallel>-->
+					<!--					<threadCount>4</threadCount>-->
+					<!--					<forkCount>1</forkCount>-->
+					<!--					<reuseForks>true</reuseForks>-->
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testrunners/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+           <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+        </argLine>
         </configuration>
+        
+         <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+    </dependencies>
+        
       </plugin>
 			
 		</plugins>

@@ -15,6 +15,18 @@ import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.utils.CSVUtil;
 import com.qa.opencart.utils.ExcelUtil;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+
+
+@Epic("Epic 300: OpenCart Product Info Page Design")
+@Feature("Product Info Page Features")
+@Story("US 103:Test Product Info Page")
 public class ProductInfoPageTest extends BaseTest {
 
 	@BeforeClass
@@ -32,7 +44,9 @@ public class ProductInfoPageTest extends BaseTest {
 			{"samsung","Samsung Galaxy Tab 10.1"}
 		};
 	}
-
+	@Owner("Sowmya")
+	@Severity(SeverityLevel.MINOR)
+	@Description("Test Product Info Page: Product {1} Header")
 	@Test(dataProvider ="productHeaderTestData")
 	public void productHeaderTest(String searchKey,String productName) {
 		searchPage = accPage.doSearch(searchKey);
@@ -40,6 +54,10 @@ public class ProductInfoPageTest extends BaseTest {
 		String actProductHeader = productInfoPage.getProductHeader();
 		Assert.assertEquals(actProductHeader, productName);
 	}
+	
+	@Owner("Sowmya")
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Product Page URL")
 
 	@Test
 	public void productPageURLTest() {

@@ -25,6 +25,8 @@ import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.exceptions.BrowserException;
 import com.qa.opencart.factory.DriverFactory;
 
+import io.qameta.allure.Step;
+
 
 public class ElementUtil {
 
@@ -48,6 +50,7 @@ public class ElementUtil {
 		}
 	}
 
+	@Step("SubStep 3.1: Check if Element {0} is displayed on DOM")
 	public boolean isElementDisplayed(By locator) {
 		try {
 			return getElement(locator).isDisplayed();
@@ -57,6 +60,7 @@ public class ElementUtil {
 		}
 	}
 
+	@Step("EnterValue {1} into Element {0}")
 	public void doSendKeys(By locator, String value) {
 		nullCheck(value);
 		getElement(locator).clear();
@@ -76,10 +80,12 @@ public class ElementUtil {
 		
 	}
 
+	@Step("Click on Button {0}")
 	public void doClick(By locator) {
 		getElement(locator).click();
 	}
 
+	@Step("Get Text using locator: {0}")
 	public String doElementGetText(By locator) {
 
 		String eleText = getElement(locator).getText();
@@ -429,6 +435,7 @@ public class ElementUtil {
 	 * @param timeout
 	 * @return
 	 */
+	@Step("waiting for Element {0} for timeout: {1}")
 	public  WebElement waitForElementVisible(By locator, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -449,6 +456,7 @@ public class ElementUtil {
 		waitForElementVisible(locator,timeout).click();
 	}
 
+	@Step("Waiting for element: {0} to be clickable with timeout: {1} ")
 	public void clickWhenReady(By locator, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -506,6 +514,7 @@ public class ElementUtil {
 		}
 	}
 	
+	@Step("SubStep 1.1: Wait until valid title is displayed then return the title")
 	public String waitForTitle(int timeout, String title) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
@@ -516,6 +525,7 @@ public class ElementUtil {
 		}
 	}
 	
+	@Step("SubStep 2.1: Wait Until valid URL Then return the Cuurent URL")
 	public String waitForURLContains(int timeout, String partOfURL) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {

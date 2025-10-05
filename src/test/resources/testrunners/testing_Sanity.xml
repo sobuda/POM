@@ -4,7 +4,7 @@
 
 <listeners>
 	<listener class-name ="com.aventstack.chaintest.plugins.ChainTestListener"/>
-
+	<listener class-name = "com.qa.opencart.listeners.TestAllureListener"/>
 </listeners>
 
 <test name="Login Page Test">
