@@ -3,7 +3,6 @@ screenshots/
 screenshot/
 test-output/
 build/
-
 opencart.log
 ##############################
 ## Java
@@ -31,7 +30,6 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 .mvn
-
 ##############################
 ## IntelliJ
 ##############################
