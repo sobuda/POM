@@ -5,7 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,10 @@ public class DriverFactory {
 	public static ThreadLocal<WebDriver> thLocal = new ThreadLocal<WebDriver>();
 	
 	public static String highlight;
+	
+	private final static Logger log = LogManager.getLogger(DriverFactory.class);
+
+	
 	/**
 	 * 
 	 * Used for Initializing driver with given browserName.
@@ -39,7 +44,8 @@ public class DriverFactory {
 	public WebDriver intDriver(Properties prop) {
 		
 		String browserName = prop.getProperty("browser");
-		System.out.println("BrowserName: "+browserName);
+		log.info("BrowserName: "+browserName);
+		//System.out.println("BrowserName: "+browserName);
 		
 		optionsManager = new OptionsManager(prop);
 		
@@ -67,7 +73,7 @@ public class DriverFactory {
 			break;
 			
 		default:
-			System.out.println("Pass Valid Browser Name..." + browserName);
+			log.info("Pass Valid Browser Name..." + browserName);
 			throw new BrowserException("======INVALID BROWSER======");
 		}
 		ChainTestListener.log("Initialising driver....");
@@ -90,11 +96,11 @@ public class DriverFactory {
 			FileInputStream fip =null ;
 		
 		if(envName==null) {
-			System.out.println("env is null. SO Running Test on QA environment");
+			log.info("env is null. SO Running Test on QA environment");
 			fip = new FileInputStream("./src/test/resources/config/qa.config.properties");
 		}
 		else {
-			System.out.println("Running Test on env: "+envName);
+			log.info("Running Test on env: "+envName);
 			
 			switch (envName) {
 			case "qa":

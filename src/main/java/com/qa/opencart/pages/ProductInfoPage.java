@@ -1,5 +1,7 @@
 package com.qa.opencart.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,15 +15,20 @@ import java.util.Map;
 
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class ProductInfoPage {
 
 	private WebDriver driver;
 	private ElementUtil eUtil;
 
 	private By productHeader = By.tagName("h1");
+	
 	private By productImages = By.xpath("//ul[@class='thumbnails']/li");
 	private By productMetaData = By.xpath("(//div[@id='content']//ul[@class='list-unstyled'])[1]/li");
 	private By productPriceData = By.xpath("(//div[@id='content']//ul[@class='list-unstyled'])[2]/li");
+
+	private static Logger log = LogManager.getLogger(ProductInfoPage.class);
 
 	private Map<String, String> productMap;
 
@@ -32,27 +39,30 @@ public class ProductInfoPage {
 
 	public String getProductHeader() {
 		String header = eUtil.waitForElementVisible(productHeader, DEFAULT_TIMEOUT).getText();
-		System.out.println(header);
+		log.info(header);
 
 		return header;
 	}
 
+	@Step("Get selected Product Page url.")
 	public String getProductPageURL() {
 		String productPageURL = eUtil.waitForURLContains(DEFAULT_TIMEOUT, PRODUCT_PAGE_FRACT_URL);
 		return productPageURL;
 	}
 
+	@Step("Get Image Count for product")
 	public int getImageCount() {
 		int count = eUtil.waitForElementsVisible(productImages, DEFAULT_TIMEOUT).size();
-		System.out.println("Images: "+count);
+		log.info("Images: "+count);
 		return count;
 	}
 
+	@Step("Get Product details")
 	public Map<String, String> getProductMapDetails() {
 		productMap = new HashMap<String, String>();
 		getProductMetaData();
 		getProductPriceData();
-		System.out.println(productMap);
+		log.info(productMap);
 		return productMap;
 	}
 

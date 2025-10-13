@@ -15,6 +15,8 @@
 		<maven.compiler.release>17</maven.compiler.release>
 		<allure.version>2.24.0</allure.version>
 		<aspectj.version>1.9.20.1</aspectj.version>
+		<log4j.version>2.25.2</log4j.version>
+		
 	</properties>
 
 
@@ -72,7 +74,19 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
+        
+                <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+                <version>2.25.2</version>
+
+        </dependency>
 		
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>${log4j.version}</version>
+</dependency>
 	</dependencies>
 
 	<build>

@@ -1,5 +1,7 @@
 package com.qa.opencart.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -10,9 +12,13 @@ import com.qa.opencart.utils.StringUtils;
 public class RegistrationPage {
 	private WebDriver driver;
 	private ElementUtil eUtil;
+	
+	private static Logger log = LogManager.getLogger(RegistrationPage.class);
+
 
 	public RegistrationPage(WebDriver driver) {
 		this.driver = driver;
+		
 		eUtil = new ElementUtil(driver);
 	}
 
@@ -34,6 +40,7 @@ public class RegistrationPage {
 
 	public boolean userRegistration(String firstName, String lastName, String telephone, String password,
 			String subscribe) {
+		log.info("Registration info: ",firstName, lastName, telephone, password, subscribe);
 		eUtil.waitForElementVisible(this.firstName, AppConstants.DEFAULT_TIMEOUT).sendKeys(firstName);
 		eUtil.doSendKeys(this.lastName, lastName);
 		eUtil.doSendKeys(this.email, StringUtils.getRandomEmail());
@@ -50,7 +57,8 @@ public class RegistrationPage {
 		eUtil.doClick(continueBtn);
 		
 		
-		eUtil.waitForElementsVisible(successMsg, AppConstants.DEFAULT_TIMEOUT);
+		eUtil.waitForElementsVisible(successMsg, AppConstants.MEDIUM_DEFAULT_TIMEOUT);
+		
 		if(eUtil.doElementGetText(successMsg).contains(AppConstants.REGISTER_SUCCESS_MESSAGE)) {
 			
 			eUtil.clickWhenReady(logout, AppConstants.DEFAULT_TIMEOUT);

@@ -37,7 +37,7 @@ public class SearchResultsPage {
 		return productsEle;
 	}
 
-	@Step("Step 3: Select product: {0}")
+	@Step("Step : Select product: {0}")
 	public ProductInfoPage selectProduct(String productName) {
 		eUtil.waitForElementVisible(By.linkText(productName), DEFAULT_TIMEOUT).click();
 		return new ProductInfoPage(driver);

@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
     <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+    <listener class-name="com.qa.opencart.listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Login Page Test(failed)" verbose="4">
     <parameter name="browser" value="chrome"/>
@@ -13,7 +14,11 @@
           <include name="loginPageTitleTest"/>
           <include name="logAfterInitBrowser"/>
           <include name="setUp"/>
+          <include name="forgotPswLinkExist"/>
+          <include name="loginPageURLTest"/>
           <include name="attachScreenShot"/>
+          <include name="dologinTest"/>
+          <include name="forgotpsw"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->

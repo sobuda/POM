@@ -6,6 +6,7 @@
 <listeners>
 	<listener class-name ="com.aventstack.chaintest.plugins.ChainTestListener"/>
 	<listener class-name = "com.qa.opencart.listeners.TestAllureListener"/>
+	<listener class-name = "com.qa.opencart.listeners.AnnotationTransformer"/>
 </listeners>
 
 	<test name="Login Page Test">
@@ -45,7 +46,7 @@
 	</test>
 
 
-<!-- 
+
 	<test name="Registration Page Test">
 		<parameter name = "browser" value="chrome" />
 
@@ -53,7 +54,7 @@
 			<class name="com.qa.opencart.tests.RegistrationPageTest" />
 		</classes>
 	</test>
- -->
+ 
 
 
 </suite>

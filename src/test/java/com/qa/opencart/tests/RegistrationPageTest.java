@@ -9,11 +9,23 @@ import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.utils.ExcelUtil;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+
+@Epic("Epic 400: OpenCart Registration Page Design")
+@Feature("Registration Page Features")
+@Story("US 206:Test Registration Page")
 public class RegistrationPageTest extends BaseTest {
 
 	@BeforeClass
 	public void registrationPageSetup() {
 		registerPage = loginPage.navigateToRegisterPage();
+		
 	}
 	@DataProvider
 	public Object[][] userInfoData(){
@@ -29,6 +41,9 @@ public class RegistrationPageTest extends BaseTest {
 		return ExcelUtil.getTestData(AppConstants.EXCEL_REGISTER_SHEET);
 	}
 	
+	@Owner("Sowmya")
+	@Severity(SeverityLevel.BLOCKER)
+	@Description("Test Registration with Valid Inputs: FirstName: {0}, LastName: {1}, Tele: {2}, password: {3}, subscribe: {4}")
 	@Test(dataProvider = "getUserDataExcel")
 	public void userResgistrationTest(String firstName, String lastname, String telephone, String password, String subscribe) {
 		Assert.assertTrue(registerPage.userRegistration(firstName, lastname, telephone, password, subscribe));

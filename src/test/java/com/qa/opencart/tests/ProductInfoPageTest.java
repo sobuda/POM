@@ -81,6 +81,7 @@ public class ProductInfoPageTest extends BaseTest {
 	
 	@DataProvider
 	public Object[][] getProductDataExcel(){
+		
 		return ExcelUtil.getTestData(AppConstants.EXCEL_PRODUCT_SHEET);
 	}
 
@@ -88,6 +89,10 @@ public class ProductInfoPageTest extends BaseTest {
 	public Object[][] getProductCSVData(){
 		return CSVUtil.getCsvData(AppConstants.CSV_PRODUCT_SHEET);
 	}
+	
+	@Owner("Sowmya")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Images Count for seleted product")
 	@Test(dataProvider="getProductCSVData")
 	public void productImageCountTest(String searchKey,String productName,String expImageCount) {
 		searchPage = accPage.doSearch(searchKey);
@@ -107,6 +112,9 @@ public class ProductInfoPageTest extends BaseTest {
 		};
 	}
 	
+	@Owner("Sowmya")
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Product details of slected product")
 	@Test(dataProvider="productDetailsData")
 	public void productMetaDataTest(String searchKey, String productName, String brand,
 			String productCode,String rewardPoints,String avalability,String productPrice,String exTaxPrice) {

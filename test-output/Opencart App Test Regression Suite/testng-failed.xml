@@ -3,19 +3,21 @@
 <suite parallel="tests" name="Failed suite [Opencart App Test Regression Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
+    <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+    <listener class-name="com.qa.opencart.listeners.AnnotationTransformer"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Login Page Test(failed)">
+  <test thread-count="5" parallel="tests" name="Registration Page Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.opencart.tests.LoginPageTest">
+      <class name="com.qa.opencart.tests.RegistrationPageTest">
         <methods>
-          <include name="loginPageTitleTest"/>
-          <include name="logAfterInitBrowser"/>
           <include name="setUp"/>
+          <include name="userResgistrationTest" invocation-numbers="0 1 2"/>
+          <include name="registrationPageSetup"/>
           <include name="attachScreenShot"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.opencart.tests.LoginPageTest -->
+      </class> <!-- com.qa.opencart.tests.RegistrationPageTest -->
     </classes>
-  </test> <!-- Login Page Test(failed) -->
+  </test> <!-- Registration Page Test(failed) -->
 </suite> <!-- Failed suite [Opencart App Test Regression Suite] -->

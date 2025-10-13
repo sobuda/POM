@@ -1,5 +1,7 @@
 package com.qa.opencart.tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -21,6 +23,8 @@ import  static com.qa.opencart.constants.AppConstants.*;
 @Feature("Login Page Features")
 @Story("US 101: Test LoginPage with Valid Credentials")
 public class LoginPageTest extends BaseTest {
+	
+	private static Logger log = LogManager.getLogger(LoginPageTest.class);
 	
 	@Owner("Sowmya")
 	@Severity(SeverityLevel.MINOR)
@@ -61,8 +65,8 @@ public class LoginPageTest extends BaseTest {
 		
 	}
 	
-	@Test(enabled=true, description="Work In Progress WIP")
+	@Test(enabled=false, description="Work In Progress WIP")
 	public void forgotpsw() {
-		System.out.println();
+		log.warn("In Progress");
 	}
 }
