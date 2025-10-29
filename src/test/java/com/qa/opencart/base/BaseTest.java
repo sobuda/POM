@@ -24,7 +24,6 @@ import com.qa.opencart.utils.JavascriptUtil;
 public class BaseTest {
 
 	WebDriver driver;
-	
 	DriverFactory df;
 	protected Properties prop;
 	protected AccountsPage accPage;

@@ -60,7 +60,7 @@ public class AccountsPageTest extends BaseTest {
 	@Owner("Sowmya")
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Account Page Headers")
-	@Test
+	@Test(priority = Short.MAX_VALUE)
 	public void accPageHeadersTest() {
 		List<String> actHeaders = accPage.getAccPageHeaders();
 		Assert.assertEquals(actHeaders, ACC_PAGE_HEADERS_LIST);
