@@ -527,7 +527,7 @@ public class ElementUtil {
 	
 	@Step("SubStep 2.1: Wait Until valid URL Then return the Cuurent URL")
 	public String waitForURLContains(int timeout, String partOfURL) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 		try {
 		wait.until(ExpectedConditions.urlContains(partOfURL));
 		return driver.getCurrentUrl();

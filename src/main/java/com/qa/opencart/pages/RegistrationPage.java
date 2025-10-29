@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.qa.opencart.constants.AppConstants;
+import static com.qa.opencart.constants.AppConstants.*;
 import com.qa.opencart.utils.ElementUtil;
 import com.qa.opencart.utils.StringUtils;
 
@@ -41,7 +41,7 @@ public class RegistrationPage {
 	public boolean userRegistration(String firstName, String lastName, String telephone, String password,
 			String subscribe) {
 		log.info("Registration info: ",firstName, lastName, telephone, password, subscribe);
-		eUtil.waitForElementVisible(this.firstName, AppConstants.DEFAULT_TIMEOUT).sendKeys(firstName);
+		eUtil.waitForElementVisible(this.firstName, DEFAULT_TIMEOUT).sendKeys(firstName);
 		eUtil.doSendKeys(this.lastName, lastName);
 		eUtil.doSendKeys(this.email, StringUtils.getRandomEmail());
 		eUtil.doSendKeys(this.telephone, telephone);
@@ -56,16 +56,22 @@ public class RegistrationPage {
 		eUtil.doClick(agree);
 		eUtil.doClick(continueBtn);
 		
-		
-		eUtil.waitForElementsVisible(successMsg, AppConstants.MEDIUM_DEFAULT_TIMEOUT);
-		
-		if(eUtil.doElementGetText(successMsg).contains(AppConstants.REGISTER_SUCCESS_MESSAGE)) {
+		if(eUtil.waitForURLContains(10, REGISTRATION_SUCCESS_FRACT_URL).contains(REGISTRATION_SUCCESS_FRACT_URL)) {
 			
-			eUtil.clickWhenReady(logout, AppConstants.DEFAULT_TIMEOUT);
-			eUtil.clickWhenReady(registerLink, AppConstants.DEFAULT_TIMEOUT);
+		
+		//eUtil.waitForElementsVisible(successMsg, MEDIUM_DEFAULT_TIMEOUT);
+		
+		if(eUtil.doElementGetText(successMsg).contains(REGISTER_SUCCESS_MESSAGE)) {
+			
+			eUtil.clickWhenReady(logout, MEDIUM_DEFAULT_TIMEOUT);
+			eUtil.clickWhenReady(registerLink, MEDIUM_DEFAULT_TIMEOUT);
 			return true;
 		}
 		else return false;
+		
+	}
+		else return false;
+	
 	}
 
 }

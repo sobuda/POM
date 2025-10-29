@@ -21,6 +21,7 @@ public class AppConstants {
 	
 	public static final String PRODUCT_PAGE_FRACT_URL = "route=product/product&product_id";
 	
+	public static final String REGISTRATION_SUCCESS_FRACT_URL = "account/success";
 	
 	
 	public static final String[] list = {"My Account","My Orders","My Affiliate Account","Newsletter"};
